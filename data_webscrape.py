@@ -25,8 +25,9 @@ teamurlresults = soupteam.find_all("ul", class_="arrow-list2 col-md-6 col-sm-6 c
 scrapeTeamURLs = []
 
 for teamcard in teamurlresults:
-    # print(teamcard)
-    teamurl = teamcard.find_all("a")[3]["href"]
+    print(teamcard)
+    # teamurl = teamcard.find_all("a")[3]["href"]
+    teamurl = teamcard.find_all("a")[2]["href"]
     # print(teamurl)
     scrapeTeamURLs.append("https://en.as.com" + teamurl)
 
